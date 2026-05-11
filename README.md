@@ -7,19 +7,29 @@
 
 ## Install
 
-\`\`\`bash
+```bash
 npm install @creadev.org/storage
-\`\`\`
+```
 
 ## Usage
 
-\`\`\`typescript
-import { } from '@creadev.org/storage';
+```typescript
+import { Storage, Brain, createStorage } from '@creadev.org/storage';
 
-// ...
-\`\`\`
+const store = createStorage('my-data');
+await store.set('key', { data: 'value' });
+const value = await store.get('key');
+const list = await store.list();
+```
+
+## API
+
+| Class | Description |
+|-------|-------------|
+| `Storage<T>` | Key-value storage |
+| `Brain` | Memory islands |
+| `createStorage(name, options?)` | Create storage instance |
 
 ## License
 
 MIT
-retry
