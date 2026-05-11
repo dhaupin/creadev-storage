@@ -33,3 +33,4 @@ const list = await store.list();
 ## License
 
 MIT
+trigger
